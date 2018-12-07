@@ -8,9 +8,11 @@ public class IntArrayWorker {
 	 * @param theMatrix
 	 *            the one to use
 	 */
+
 	public void setMatrix(int[][] theMatrix) {
 		matrix = theMatrix;
 	}
+
 
 	/**
 	 * Method to return the total
@@ -84,5 +86,48 @@ public class IntArrayWorker {
 			}
 		}
 	}
+
+	public int getCount(int num) {
+		int numCount = 0;
+		for (int[] rowArray : matrix) {
+			for (int item : rowArray) {
+				if (item == num) {
+					numCount += 1;
+				}
+			}
+		}
+
+		return numCount;
+	}
+
+	public int getLargest() {
+		int largest = 0;
+
+		for (int[] rowArray : matrix) {
+			for (int item : rowArray) {
+				if (item > largest) {
+					largest = item;
+				}
+			}
+		}
+
+		return largest;
+
+	}
+
+	public int getColTotal(int colNum) {
+		int total = 0;
+
+		for (int[] rowArray : matrix) {
+			for (int item : rowArray) {
+				if (rowArray[item] == colNum) {
+					total += item;
+				}
+			}
+		}
+		return total;
+	}
+
+
 
 }
