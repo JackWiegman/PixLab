@@ -119,9 +119,9 @@ public class IntArrayWorker {
 		int total = 0;
 
 		for (int[] rowArray : matrix) {
-			for (int item : rowArray) {
-				if (rowArray[item] == colNum) {
-					total += item;
+			for (int i = 0; i < rowArray.length; i++) {
+				if (i == colNum) {
+					total += rowArray[i];
 				}
 			}
 		}
