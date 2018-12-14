@@ -224,6 +224,24 @@ public class Picture extends SimplePicture {
 		}
 	}
 
+	public void grayscale() {
+		Pixel[][] pixels = this.getPixels2D();
+		for (Pixel[] rowArray : pixels) {
+			for (Pixel pixelObj : rowArray) {
+
+				int red = pixelObj.getRed();
+				int green = pixelObj.getGreen();
+				int blue = pixelObj.getBlue();
+
+				int avg = ((red + green + blue) / 3);
+
+				pixelObj.setRed(avg);
+				pixelObj.setGreen(avg);
+				pixelObj.setBlue(avg);
+			}
+		}
+	}
+
 	/*
 	 * Main method for testing - each class in Java can have a main method
 	 */

@@ -60,9 +60,15 @@ public class PictureTester
   }
 
   public static void testNegate() {
-    Picture arch = new Picture("butterfly1.jpg");
-    arch.negate();
-    arch.explore();
+    Picture butterfly = new Picture("butterfly1.jpg");
+    butterfly.negate();
+    butterfly.explore();
+  }
+
+  public static void testGrayscale() {
+    Picture swan = new Picture("swan.jpg");
+    swan.grayscale();
+    swan.explore();
   }
   
   /** Main method for testing.  Every class can have a main
@@ -76,8 +82,8 @@ public class PictureTester
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    testNegate();
-    //testGrayscale();
+    //testNegate();
+    testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
