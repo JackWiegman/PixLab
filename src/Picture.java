@@ -1,3 +1,4 @@
+import java.io.*;
 import java.awt.*;
 import java.awt.font.*;
 import java.awt.geom.*;
@@ -238,6 +239,24 @@ public class Picture extends SimplePicture {
 				pixelObj.setRed(avg);
 				pixelObj.setGreen(avg);
 				pixelObj.setBlue(avg);
+			}
+		}
+	}
+
+	public void fixUnderwater() {
+		Pixel[][] pixels = this.getPixels2D();
+		for (Pixel[] rowArray : pixels) {
+			for (Pixel pixel : rowArray) {
+
+				int red = pixel.getRed();
+				int green = pixel.getGreen();
+				int blue = pixel.getBlue();
+
+				int blueVal = (int) Math.round(blue / 2);
+				int greenVal = (int) Math.round(green / 1.4);
+
+				pixel.setGreen(green - (100));
+				pixel.setBlue(blue - (100));
 			}
 		}
 	}

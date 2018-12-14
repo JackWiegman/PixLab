@@ -70,6 +70,12 @@ public class PictureTester
     swan.grayscale();
     swan.explore();
   }
+
+  public static void testFixUnderwater() {
+    Picture water = new Picture("water.jpg");
+    water.fixUnderwater();
+    water.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -78,12 +84,13 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+    testFixUnderwater();
     //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
-    testGrayscale();
+    //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
