@@ -78,9 +78,15 @@ public class PictureTester
   }
 
   public static void testMirrorVerticalRightToLeft() {
-    Picture cat = new Picture("swan.jpg");
+    Picture cat = new Picture("caterpillar.jpg");
     cat.mirrorVerticalRightToLeft();
     cat.explore();
+  }
+
+  public static void testMirrorHorizontal() {
+    Picture gorge = new Picture("swan.jpg");
+    gorge.mirrorHorizontal();
+    gorge.explore();
   }
   
   /** Main method for testing.  Every class can have a main
@@ -98,7 +104,8 @@ public class PictureTester
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    testMirrorVertical();
+    //testMirrorVertical();
+    testMirrorHorizontal();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
