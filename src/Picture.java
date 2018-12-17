@@ -275,7 +275,7 @@ public class Picture extends SimplePicture {
 		}
 	}
 
-	public void mirrorHorizontal() {
+	public void mirrorHorizontalTopToBottom() {
 		Pixel[][] pixels = this.getPixels2D();
 		Pixel topPixel = null;
 		Pixel bottomPixel = null;
@@ -286,6 +286,21 @@ public class Picture extends SimplePicture {
 				topPixel = pixels[row][col];
 				bottomPixel = pixels[(height-1) - row][col];
 				bottomPixel.setColor(topPixel.getColor());
+			}
+		}
+	}
+
+	public void mirrorHorizontalBottomToTop() {
+		Pixel[][] pixels = this.getPixels2D();
+		Pixel topPixel = null;
+		Pixel bottomPixel = null;
+		int height = pixels.length;
+
+		for (int col = 0; col < pixels[0].length; col++) {
+			for (int row = height - 1; row > height / 2; row--) {
+				bottomPixel = pixels[row][col];
+				topPixel = pixels[(height-1) - row][col];
+				topPixel.setColor(bottomPixel.getColor());
 			}
 		}
 	}

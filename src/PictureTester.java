@@ -83,9 +83,15 @@ public class PictureTester
     cat.explore();
   }
 
-  public static void testMirrorHorizontal() {
+  public static void testMirrorHorizontalTopToBottom() {
     Picture gorge = new Picture("swan.jpg");
-    gorge.mirrorHorizontal();
+    gorge.mirrorHorizontalTopToBottom();
+    gorge.explore();
+  }
+
+  public static void testMirrorHorizontalBottomToTop() {
+    Picture gorge = new Picture("swan.jpg");
+    gorge.mirrorHorizontalBottomToTop();
     gorge.explore();
   }
   
@@ -105,7 +111,8 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
-    testMirrorHorizontal();
+    testMirrorHorizontalTopToBottom();
+    testMirrorHorizontalBottomToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
