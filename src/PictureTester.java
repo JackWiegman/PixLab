@@ -78,7 +78,7 @@ public class PictureTester
   }
 
   public static void testMirrorVerticalRightToLeft() {
-    Picture cat = new Picture("caterpillar.jpg");
+    Picture cat = new Picture("swan.jpg");
     cat.mirrorVerticalRightToLeft();
     cat.explore();
   }
