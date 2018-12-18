@@ -8,3 +8,7 @@ top left: 173, 238
 Left Arm: 
 bottom right: 193, 169
 top left: 160, 104
+
+Seagull: 
+Bottom Right: 320, 337
+Top Left: 232, 236
