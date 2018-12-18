@@ -51,6 +51,13 @@ public class PictureTester
     swan.explore();
   }
 
+  public static void testMyEdgeDetection()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.myEdgeDetection(1);
+    swan.explore();
+  }
+
   /** Method to test the keepOnlyBlue method **/
 
   public static void testKeepOnlyBlue() {
@@ -137,9 +144,10 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    testCollage();
+    //testCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
+    testMyEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
