@@ -307,6 +307,50 @@ public class Picture extends SimplePicture {
 		}
 	}
 
+	public void mirrorArms() {
+		//right arm
+		int mirrorPoint = 195;
+		Pixel leftPixel = null;
+		Pixel rightPixel = null;
+		int count = 0;
+		Pixel[][] pixels = this.getPixels2D();
+
+		// loop through the rows
+		for (int row = 173; row < 194; row++) {
+			// loop from 13 to just before the mirror point
+			for (int col = 238; col < 292; col++) {
+
+				leftPixel = pixels[row][col];
+				rightPixel = pixels[mirrorPoint - row + mirrorPoint][col];
+				rightPixel.setColor(leftPixel.getColor());
+				count+=1;
+			}
+		}
+		System.out.println(count);
+
+		mirrorPoint = 190;
+		count = 0;
+
+		// left arm
+
+		// loop through the rows
+		for (int row = 160; row < 193; row++) {
+			// loop from 13 to just before the mirror point
+			for (int col = 104; col < 169; col++) {
+
+				leftPixel = pixels[row][col];
+				rightPixel = pixels[mirrorPoint - row + mirrorPoint][col];
+				rightPixel.setColor(leftPixel.getColor());
+				count+=1;
+			}
+		}
+
+		System.out.println(count);
+	}
+
+
+
+
 	/*
 	 * Main method for testing - each class in Java can have a main method
 	 */
